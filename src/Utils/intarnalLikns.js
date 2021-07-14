@@ -2,8 +2,7 @@ const LINK = {
 
     BASE_URL: '/sequelize/api',
 
-    USER_URL: '/getUser'
-
+    ONE_TO_ONE_URL: '/one-to-one'
 }
 
 module.exports = { LINK };

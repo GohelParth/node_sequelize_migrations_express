@@ -4,8 +4,11 @@ const { User, Order } = require('../../models');
 /* This is a controller which will get the user from User table and 
 and  there is a one condition for the order table ,
  the condition will get the all orders from the Order table,
-  which contains the id:(it is a userId) ,which is define in where conditon*/
-const getUser = async (req, res) => {
+  which contains the id:(it is a userId) ,which is define in where conditon
+  
+  Note : This is one to one relationship example (one user can do only one order)
+*/
+const one_To_one = async (req, res) => {
     try {
         const findAllUsers = await User.findAll({
 
@@ -13,7 +16,7 @@ const getUser = async (req, res) => {
                 model: Order,
                 attributes: ['items']
             }],
-            where: { id: 14 }
+            where: { id: 1 }
         });
 
         if (findAllUsers) {
@@ -32,4 +35,4 @@ const getUser = async (req, res) => {
     }
 }
 
-module.exports = { getUser }
+module.exports = { one_To_one }

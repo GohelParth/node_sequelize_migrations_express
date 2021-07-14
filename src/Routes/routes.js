@@ -3,10 +3,13 @@ const route = express.Router();
 const userControllers = require('../Controllers/userControllers');
 const { LINK } = require('../Utils/intarnalLikns');
 
-const { USER_URL } = LINK;
+//endpoint url
+const { ONE_TO_ONE_URL } = LINK;
 
-const { getUser } = userControllers;
+// Controllers 
+const { one_To_one } = userControllers;
 
-route.get(USER_URL, getUser)
+//define route 
+route.get(ONE_TO_ONE_URL, one_To_one)
 
 module.exports = route;
