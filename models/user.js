@@ -13,8 +13,19 @@ module.exports = (sequelize, DataTypes) => {
       // define association here     
 
       // hasOne is use here for get record of orders by user id
+
+      /*
+      // for one-to-one
       User.hasOne(models.Order, {
-        foreignKey: "user_id" // This is FK in order table
+        foreignKey: "user_id",
+        as: 'User_Orders'// This is FK in order table
+      })
+      */
+
+      // for one-to-many
+      User.hasMany(models.Order, {
+        foreignKey: "user_id",
+        as: 'User_Orders'// This is FK in order table
       })
     }
   };
