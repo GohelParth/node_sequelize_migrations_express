@@ -2,11 +2,11 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // return queryInterface.bulkInsert('PaymentMethods', [{
-    //   methods: 'Cash',
-    //   createdAt: new Date(),
-    //   updatedAt: new Date()
-    // }]);
+    return queryInterface.bulkInsert('PaymentMethods', [{
+      methods: 'Cash',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }]);
   },
 
   down: async (queryInterface, Sequelize) => {

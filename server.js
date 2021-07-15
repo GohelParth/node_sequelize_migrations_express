@@ -1,11 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 const oto_routes = require('./src/One_To_One/OTO.routes');
 const otm_routes = require('./src/One_To_Many/OTM.routes');
 const mtm_routes = require('./src/Many_To_Many/MTM.routes');
-
 const { LINK } = require('./src/Utils/intarnalLikns');
+require('dotenv').config();
 
 const { OTO_BASE_URL, OTM_BASE_URL, MTM_BASE_URL } = LINK;
 

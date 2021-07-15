@@ -17,15 +17,15 @@ module.exports = (sequelize, DataTypes) => {
       /*
       // for one-to-one
       User.hasOne(models.Order, {
-        foreignKey: "user_id",
-        as: 'User_Orders'// This is FK in order table
+        foreignKey: "user_id",// This is FK in order table
+        as: 'User_Orders'
       })
       */
 
       // for one-to-many
       User.hasMany(models.Order, {
-        foreignKey: "user_id",
-        as: 'User_Orders'// This is FK in order table
+        foreignKey: "user_id",// This is FK in order table
+        as: 'User_Orders'
       })
     }
   };
