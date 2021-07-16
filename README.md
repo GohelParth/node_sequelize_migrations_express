@@ -41,5 +41,8 @@
         - npx sequelize-cli db:seed:undo --seed [name of seed]
 
     --> npx sequelize-cli db:seed:undo:all
+    
+    # for specific seed 
+        --> npx sequelize-cli db:seed --seed [name of seeder]
 
 # Sequelize Docs Link : https://sequelize.org/master/manual/migrations.html
