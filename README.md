@@ -31,7 +31,7 @@
         - npx sequelize-cli db:migrate --to [name of migration] --
 
     # for specific migrate:undo 
-        - npx sequelize-cli db:migrate --name [name of migration]
+        - npx sequelize-cli db:migrate:undo --name [name of migration]
 
     --> npx sequelize-cli seed:generate --name demo-user
     --> npx sequelize-cli db:seed:all
