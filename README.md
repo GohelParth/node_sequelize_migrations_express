@@ -44,5 +44,8 @@
     
     # for specific seed 
         --> npx sequelize-cli db:seed --seed [name of seeder]
+        
+    # if any changes in model then once we have to use  bellow code.
+        --> ModelName.sync({ alter: true });
 
 # Sequelize Docs Link : https://sequelize.org/master/manual/migrations.html
